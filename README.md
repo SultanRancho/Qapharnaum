@@ -1,7 +1,7 @@
 # Qapharnaum
 Simple note-taking software
 
-[Download stable version](https://github.com/SultanRancho/Qnote/raw/main/note.exe)
+[Download stable version](https://github.com/SultanRancho/Qapharnaum/raw/main/note.exe)
 # Illustration
 ![This is an image](screenshot.jpg)
 
