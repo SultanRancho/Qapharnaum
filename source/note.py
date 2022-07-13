@@ -409,6 +409,7 @@ class Ui_MainWindow(object):
                 scr_width = QDesktopWidget().availableGeometry().width() / 3 - 20
 
                 i = i.replace("<", "&lt;")
+                i = i.replace(">", "&gt;")
 
                 if actual_text_size > scr_width:
                     return_content = return_content + line + "<br>"
