@@ -15,3 +15,9 @@ Require:
   pip install keyboard
   pip install functools
 ```
+Build from source :
+Using [pyinstaller](https://pypi.org/project/pyinstaller/)
+```shell
+  pip install pyinstaller
+  pyinstaller note.py --onefile --noconsole
+```
