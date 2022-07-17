@@ -107,11 +107,14 @@ class Ui_MainWindow(object):
         def resize():
             screensize = QDesktopWidget().availableGeometry()
 
+            global height, width, x, y
+
             # Choose windows size
             x = int(screensize.width() / 3 * 2)
             y = screensize.y()
             width = screensize.width() - x
             height = screensize.height()
+
             # Assign geometry
             MainWindow.setGeometry(x, y, width + 5, height)
 
@@ -144,7 +147,6 @@ class Ui_MainWindow(object):
                 if not i[2]:
                     self.verticalLayout.itemAt(index).layout().itemAt(1).widget().setText(wrap("<html>"+i[0]+"</html>"))
                 index += 1
-
 
         # Create "hide" button
         self.pushButton_4 = QPushButton(self.centralwidget)
@@ -196,9 +198,13 @@ class Ui_MainWindow(object):
         # Activ modify
         def modify(pos):
             rem_modify()
+            global height, width, x, y
             self.checkbox.setCheckState(note_liste[pos][2])
             self.textEdit.setPlainText(note_liste[pos][0])
             self.modify_button.clicked.connect(lambda: set_modif(pos))
+            self.modify_button.setGeometry(QRect(self.pushButton_2.x() + self.pushButton_2.width() + 10,
+                                                 self.textEdit.y() + self.textEdit.height() + 10, int(width / 3),
+                                                 int(height / 30)))
             MainWindow.layout().addWidget(self.modify_button)
 
         # Set modification
