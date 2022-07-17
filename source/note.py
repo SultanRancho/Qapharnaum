@@ -41,6 +41,7 @@ class Ui_MainWindow(object):
         MainWindow.window().setStyleSheet(u"background-color:black;\nborder-style:solid;\nborder-width: 2px;\nborder-color: green;")
 
         # Choose windows size
+        global height, width, x, y
         x = int(screensize.width()/3 * 2)
         y = screensize.y()
         width = screensize.width() - x
