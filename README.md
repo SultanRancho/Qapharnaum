@@ -19,5 +19,5 @@ Build from source :
 Using [pyinstaller](https://pypi.org/project/pyinstaller/)
 ```shell
   pip install pyinstaller
-  pyinstaller note.py --onefile --noconsole
+  pyinstaller note.py --onefile --noconsole --icon=icon.ico
 ```
